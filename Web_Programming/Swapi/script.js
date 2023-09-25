@@ -23,9 +23,9 @@ async function ladeCharakter(charakterId) {
   }
 }
 
-async function ladeHeimatzeitwelt(heimatzeitweltUrl) {
+async function ladeHeimatwelt(heimatweltUrl) {
   try {
-    const response = await fetch(heimatzeitweltUrl);
+    const response = await fetch(heimatweltUrl);
     const data = await response.json();
     return data.name;
   } catch (error) {
