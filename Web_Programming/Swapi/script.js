@@ -5,7 +5,7 @@ async function zeigeZufallsCharakter() {
     if (charakter) {
       document.getElementById('charakterName').textContent = charakter.name;
       document.getElementById('charakterAugenfarbe').textContent = charakter.eye_color;
-      document.getElementById('charakterHeimatzeitwelt').textContent = charakter.homeworld;
+      document.getElementById('charakterHeimatwelt').textContent = charakter.homeworld;
     }
   }
   
