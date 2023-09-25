@@ -1,13 +1,13 @@
-window.onload = init;
-function init(){
-  document.getElementById('add').onclick = add;
-}
-function add(){
-  var el = document.getElementById('list');
-  var node = document.createElement("li");
-  var link = document.createElement("a");
-  link.setAttribute('href', 'www.google.it');
-  link.innerHTML = "link";
-  node.appendChild(link);
-  el.appendChild(node);
+function eintragHinzufuegen() {
+  var eintragText = document.getElementById('eintrag').value;
+  
+  if (eintragText.trim() !== '') {
+    var neuesElement = document.createElement('li');
+    neuesElement.textContent = eintragText;
+
+    var liste = document.getElementById('liste');
+    liste.appendChild(neuesElement);
+
+    document.getElementById('eintrag').value = '';
+  }
 }
