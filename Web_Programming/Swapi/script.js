@@ -7,8 +7,8 @@ async function zeigeZufallsCharakter() {
     document.getElementById('charakterAugenfarbe').textContent = charakter.eye_color;
 
     // Heimatzeitwelt laden und anzeigen
-    const heimatzeitwelt = await ladeHeimatzeitwelt(charakter.homeworld);
-    document.getElementById('charakterHeimatzeitwelt').textContent = heimatzeitwelt;
+    const heimatwelt = await ladeHeimatwelt(charakter.homeworld);
+    document.getElementById('charakterHeimatwelt').textContent = heimatwelt;
   }
 }
 
@@ -29,7 +29,7 @@ async function ladeHeimatzeitwelt(heimatzeitweltUrl) {
     const data = await response.json();
     return data.name;
   } catch (error) {
-    console.error('Fehler beim Laden der Heimatzeitwelt:', error);
-    return 'Unbekannte Heimatzeitwelt';
+    console.error('Fehler beim Laden der Heimatwelt:', error);
+    return 'Unbekannte Heimatwelt';
   }
 }
