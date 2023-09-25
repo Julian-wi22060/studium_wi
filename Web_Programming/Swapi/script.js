@@ -6,7 +6,7 @@ async function zeigeZufallsCharakter() {
     document.getElementById('charakterName').textContent = charakter.name;
     document.getElementById('charakterAugenfarbe').textContent = charakter.eye_color;
 
-    // Heimatzeitwelt laden und anzeigen
+    // Heimatwelt laden und anzeigen
     const heimatwelt = await ladeHeimatwelt(charakter.homeworld);
     document.getElementById('charakterHeimatwelt').textContent = heimatwelt;
   }
